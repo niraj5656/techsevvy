@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Services Section</title>
+
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/fontawesome.min.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.css">
+	<link href="https://fonts.googleapis.com/css?family=Poppins:400,500,700&display=swap" rel="stylesheet">
+   <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css'>
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<style>
+    
+ .hero {
+	 height: 50vh;
+	 min-height: 400px;
+	 width: 100%;
+	 background: url(https://source.unsplash.com/3fX0FvA-2us/1600x900) no-repeat top center #282828;
+	 background-size: cover;
+	 color: #fff;
+	 display: flex;
+	 justify-content: center;
+	 align-items: center;
+}
+ .hero::before {
+	 content: "";
+	 position: absolute;
+	 width: 100%;
+	 height: 100%;
+	 background-color: rgba(40, 40, 40, .7);
+}
+ .hero__caption {
+	 position: relative;
+	 max-width: 80%;
+	 text-transform: uppercase;
+	 text-align: center;
+	 line-height: 1.5;
+	 letter-spacing: 5px;
+}
+ .hero__caption h2 {
+	 font-weight: 300;
+	 font-size: 30px;
+}
+ @media screen and (min-width: 760px) {
+	 .hero__caption h2 {
+		 font-size: 48px;
+	}
+}
+
+ .mask-polygon-1 {
+	 clip-path: polygon(0 0, 100% 0, 100% 82.8%, 37.2% 100%, 0 77.2%);
+}
+ 
+
+
+.start-header {
+	opacity: 1;
+	transform: translateY(0);
+	padding: 20px 0;
+	box-shadow: 0 10px 30px 0 rgba(138, 155, 165, 0.15);
+	-webkit-transition : all 0.3s ease-out;
+	transition : all 0.3s ease-out;
+}
+.start-header.scroll-on {
+	box-shadow: 0 5px 10px 0 rgba(138, 155, 165, 0.15);
+	padding: 10px 0;
+	-webkit-transition : all 0.3s ease-out;
+	transition : all 0.3s ease-out;
+}
+.start-header.scroll-on .navbar-brand img{
+	height: 24px;
+	-webkit-transition : all 0.3s ease-out;
+	transition : all 0.3s ease-out;
+}
+.navigation-wrap{
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+	-webkit-transition : all 0.3s ease-out;
+	transition : all 0.3s ease-out;
+}
+.navbar{
+	padding: 0;
+}
+.navbar-brand img{
+	height: 28px;
+	width: auto;
+	display: block;
+  filter: brightness(10%);
+	-webkit-transition : all 0.3s ease-out;
+	transition : all 0.3s ease-out;
+}
+.navbar-toggler {
+	float: right;
+	border: none;
+	padding-right: 0;
+}
+.navbar-toggler:active,
+.navbar-toggler:focus {
+	outline: none;
+}
+.navbar-light .navbar-toggler-icon {
+	width: 24px;
+	height: 17px;
+	background-image: none;
+	position: relative;
+	border-bottom: 1px solid #000;
+    transition: all 300ms linear;
+}
+.navbar-light .navbar-toggler-icon:after, 
+.navbar-light .navbar-toggler-icon:before{
+	width: 24px;
+	position: absolute;
+	height: 1px;
+	background-color: #000;
+	top: 0;
+	left: 0;
+	content: '';
+	z-index: 2;
+    transition: all 300ms linear;
+}
+.navbar-light .navbar-toggler-icon:after{
+	top: 8px;
+}
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:after {
+	transform: rotate(45deg);
+}
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
+	transform: translateY(8px) rotate(-45deg);
+}
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
+	border-color: transparent;
+}
+.nav-link{
+	color: #212121 !important;
+	font-weight: 500;
+    transition: all 200ms linear;
+}
+.nav-item:hover .nav-link{
+	color: #8167a9 !important;
+}
+.nav-item.active .nav-link{
+	color: #777 !important;
+}
+.nav-link {
+	position: relative;
+	padding: 5px 0 !important;
+	display: inline-block;
+}
+.nav-item:after{
+	position: absolute;
+	bottom: -5px;
+	left: 0;
+	width: 100%;
+	height: 2px;
+	content: '';
+	background-color: #8167a9;
+	opacity: 0;
+    transition: all 200ms linear;
+}
+.nav-item:hover:after{
+	bottom: 0;
+	opacity: 1;
+}
+.nav-item.active:hover:after{
+	opacity: 0;
+}
+.nav-item{
+	position: relative;
+    transition: all 200ms linear;
+}
+
+
+p,a,h1,h2,h3,h4,h5,h6,ul,li {
+	margin: 0;
+	padding: 0;
+}
+
+.section-services {
+	font-family: "Poppins", sans-serif;
+	background-color: #e6edf7;
+	color: #202020;
+	padding-top: 115px;
+    padding-bottom: 120px;
+  margin-top: 80px;
+}
+
+.section-services .header-section {
+	margin-bottom: 34px;
+}
+
+.section-services .header-section .title {
+	position: relative;
+    padding-bottom: 14px;
+    margin-bottom: 25px;
+	font-weight: 700;
+    font-size: 32px;
+}
+
+.section-services .header-section .title:before {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 50px;
+	height: 3px;
+	background-color: #27005D;
+    border-radius: 3px;
+}
+
+.section-services .header-section .title:after {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+    transform: translateX(30px);
+	width: 10px;
+	height: 3px;
+	background-color: #504f93;
+    border-radius: 3px;
+}
+
+.section-services .header-section .description {
+	font-size: 14px;
+    color: #282828;
+}
+
+.section-services .single-service {
+    position: relative;
+    margin-top: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 40px 30px;
+    overflow: hidden;
+}
+
+.section-services .single-service .content {
+	position: relative;
+	z-index: 20;
+}
+
+.section-services .single-service .circle-before {
+    position: absolute;
+    top: 0;
+    right: 0px;
+    transform: translate(40%, -40%);
+    width: 150px;
+    height: 150px;
+    background-color: #AED2FF;
+    border: 6px solid #E4F1FF;
+    border-radius: 50%;
+    opacity: 0.5;
+    z-index: 10;
+    transition: all .6s;
+}
+
+.section-services .single-service:hover .circle-before {
+	width: 100%;
+	height: 100%;
+	transform: none;
+	border: 0;
+	border-radius: 0;
+	opacity: 1;
+}
+
+.section-services .single-service .icon {
+	display: inline-block;
+	margin-bottom: 26px;
+    width: 70px;
+    height: 70px;
+    background-color: #27005D;
+    border-radius: 5px;
+    line-height: 70px;
+    text-align: center;
+    color: #fff;
+    font-size: 30px;
+    transition: all .3s;
+}
+
+.section-services .single-service:hover .icon {
+	background-color: #fff;
+	color: #27005D;
+}
+
+.section-services .single-service .title {
+    margin-bottom: 18px;
+	font-weight: 700;
+    font-size: 23px;
+    transition: color .3s;
+}
+
+.section-services .single-service:hover .title {
+	color: #fff;
+}
+
+.section-services .single-service .description {
+    margin-bottom: 20px;
+    font-size: 14px;
+    transition: color .3s;
+}
+
+.section-services .single-service:hover .description {
+	color: #fff;
+}
+
+.section-services .single-service a {
+	position: relative;
+	font-size: 18px;
+    color: #202020;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color .3s;
+}
+
+.section-services .single-service:hover a {
+	color: #fff;
+}
+
+.section-services .single-service a:after {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 1px;
+	background-color: #ff4500;
+	transition: background-color .3s;
+}
+
+.section-services .single-service:hover a:after {
+	background-color: #fff;
+}
+
+
+
+    #obx-bottom-category-content .flex-row{
+        display:flex;
+      margin-top: 50px;
+    }
+
+    /* Split Section (FAQ/IMG) */
+
+
+    #obx-bottom-category-content .split-section{
+        margin-bottom:60px;
+    }
+
+    #obx-bottom-category-content .split-section .content-left{
+        background:#efefef;
+        padding:30px;
+        flex-basis:50%;
+        margin-right:40px;
+    }
+    
+    #obx-bottom-category-content .split-section .image-right{
+        flex-basis:50%;
+    }
+
+    #obx-bottom-category-content .split-section .image-right img{
+        width:100%;
+    }
+
+    /* Mobile */
+
+    @media (max-width: 768px) {
+        #obx-bottom-category-content .flex-row{display:block;}
+        #obx-bottom-category-content h2{font-size:24px;}
+        #obx-bottom-category-content #content-wheel .article{margin-right:0;}
+        #obx-bottom-category-content .split-section .content-left{margin-right:0;}
+    }
+
+
+
+
+.sectionClass {
+  padding: 20px 0px 50px 0px;
+  position: relative;
+  display: block;
+}
+
+.fullWidth {
+  width: 100% !important;
+  display: table;
+  float: none;
+  padding: 0;
+  min-height: 1px;
+  height: 100%;
+  position: relative;
+}
+
+
+.sectiontitle {
+  background-position: center;
+  margin: 30px 0 0px;
+  text-align: center;
+  min-height: 20px;
+}
+
+.sectiontitle h2 {
+  font-size: 30px;
+  color: #222;
+  margin-bottom: 0px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+
+.headerLine {
+  width: 160px;
+  height: 2px;
+  display: inline-block;
+  background: #101F2E;
+}
+
+
+.projectFactsWrap{
+    display: flex;
+  margin-top: 30px;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+
+#projectFacts .fullWidth{
+  padding: 0;
+}
+
+.projectFactsWrap .item{
+  width: 25%;
+  height: 100%;
+  padding: 50px 0px;
+  text-align: center;
+}
+
+.projectFactsWrap .item:nth-child(1){
+  background: rgb(16, 31, 46);
+}
+
+.projectFactsWrap .item:nth-child(2){
+  background: rgb(18, 34, 51);
+}
+
+.projectFactsWrap .item:nth-child(3){
+  background: rgb(21, 38, 56);
+}
+
+.projectFactsWrap .item:nth-child(4){
+  background: rgb(23, 44, 66);
+}
+
+.projectFactsWrap .item p.number{
+  font-size: 40px;
+  padding: 0;
+  font-weight: bold;
+}
+
+.projectFactsWrap .item p{
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 18px;
+  margin: 0;
+  padding: 10px;
+  font-family: 'Open Sans';
+}
+
+
+.projectFactsWrap .item span{
+  width: 60px;
+  background: rgba(255, 255, 255, 0.8);
+  height: 2px;
+  display: block;
+  margin: 0 auto;
+}
+
+
+.projectFactsWrap .item i{
+  vertical-align: middle;
+  font-size: 50px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+
+.projectFactsWrap .item:hover i, .projectFactsWrap .item:hover p{
+  color: white;
+}
+
+.projectFactsWrap .item:hover span{
+  background: white;
+}
+
+@media (max-width: 786px){
+  .projectFactsWrap .item {
+     flex: 0 0 50%;
+  }
+}
+
+/* AUTHOR LINK */
+
+
+
+.authorWindow{
+  width: 600px;
+  background: #75439a;
+  padding: 22px 20px 22px 20px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.authorWindowWrapper{
+  display: none;
+  left: 110px;
+  top: 0;
+  padding-left: 25px;
+  position: absolute;
+}
+
+@media screen and (max-width: 768px) {
+    .authorWindow{
+         width: 210px;
+    }
+
+}
+
+
+</style>
+</head>
+<body>
+<div class="navigation-wrap bg-light start-header start-style">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="navbar navbar-expand-md navbar-light">
+                        <a class="navbar-brand" href="#">
+                            <img src="https://assets.codepen.io/1462889/fcy.png" alt="">
+                        </a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav ml-auto py-4 py-md-0">
+                                <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                                    <a class="nav-link" href="Index.html">Home</a>
+                                </li>
+                                <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                                    <a class="nav-link" href="about.html">About Us</a>
+                                </li>
+                                <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+									<a class="nav-link" href="service.html">Services</a>
+								</li>
+								<li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                                    <a class="nav-link" href="package.html">Package</a>
+                                </li>
+								<li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+									<a class="nav-link" href="contact.html">Contact</a>
+								</li>
+								<li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+									<a class="nav-link" href="career.html">Career</a>
+								</li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+<div class="hero mask-polygon-1">
+  <div class="hero__caption">
+    <h2>My super <br><strong>responsive banner</strong> with a <strong>awesome</strong> menu</h2>
+  </div>
+</div>
+  
+<!--  text  -->
+  
+  <div id="obx-bottom-category-content">
+<div class="split-section flex-row">
+    <div class="content-left">
+        <h2>What is a Mermaid Wedding Gown?</h2>
+        <p>First and foremost, a mermaid-style wedding dress is flattering for any figure. We offer dresses for all body types, including plus-size mermaid wedding dresses. A mermaid wedding gown starts with a fitted bodice and skirt, ending with a dramatic flair. The shape resembles a mermaid, hence the name. The dress can have a smaller sweep train or a larger chapel train to provide a stunning look coming and going. </p>
+
+        <h2>Enjoy Unbounded Opportunities With a Mermaid Wedding Dress</h2>
+        <p>Mermaid wedding dresses are complemented by various materials. Crisp and sturdy fabrics can be used to sculpt your figure, starting at the neckline and continuing down to the knees, where the flair begins. Crepe offers a little more stretch and comfort than materials like satin. With lighter fabrics like chiffon, you can hold yourself like a queen as the layers of fabric trail behind you. Selecting a mermaid lace wedding dress can add a boho vibe or an air of elegance to your special day. A mermaid wedding gown offers the possibility of endless embellishments to amplify your bridal glow.</p>
+    </div>
+    <div class="image-right">
+        <img src="https://www.devotiondresses.com/bundles/uploads/media/bride_gallery/0001/52/thumb_51879_bride_gallery_original.jpeg" alt="Mermaid Wedding Dress" />
+    </div>
+</div>
+</div>
+  
+<!--  text end-->
+  
+  
+  <section class="section-services">
+		<div class="container">
+			<div class="row justify-content-center text-center">
+				<div class="col-md-10 col-lg-8">
+					<div class="header-section">
+						<h2 class="title">Exclusive Services</h2>
+						<p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur malesuada fermentum purus, eu volutpat nisi laoreet id. Phasellus fringilla accumsan metus, at tempor est hendrerit et.</p>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<!-- Single Service -->
+				<div class="col-md-6 col-lg-4">
+					<div class="single-service">
+						<div class="content">
+							<span class="icon">
+								<i class="fab fa-battle-net"></i>
+							</span>
+							<a href="services/Webdevelopment.html"> <h3 class="title">Web Development</h3> </a>
+							<p class="description">Mauris volutpat urna tristique finibus iaculis. Morbi facilisis, justo eu vulputate elementum, est augue tincidunt ante, sed efficitur leo ligula vel velit.</p>
+							<a href="services/Webdevelopment.html" class="learn-more">Learn More</a>
+						</div>
+						<span class="circle-before"></span>
+					</div>
+				</div>
+				<!-- / End Single Service -->
+				<!-- Single Service -->
+				<div class="col-md-6 col-lg-4">
+					<div class="single-service">
+						<div class="content">
+							<span class="icon">
+								<i class="fab fa-asymmetrik"></i>
+							</span>
+							<a href="services/ITManagement.html"><h3 class="title">It Management</h3></a>
+							<p class="description">Mauris volutpat urna tristique finibus iaculis. Morbi facilisis, justo eu vulputate elementum, est augue tincidunt ante, sed efficitur leo ligula vel velit.</p>
+							<a href="services/ITManagement.html" class="learn-more">Learn More</a>
+						</div>
+						<span class="circle-before"></span>
+					</div>
+				</div>
+				<!-- / End Single Service -->
+				<!-- Single Service -->
+				<div class="col-md-6 col-lg-4">
+					<div class="single-service">
+						<div class="content">
+							<span class="icon">
+								<i class="fab fa-artstation"></i>
+							</span>
+							<a href="services/SoftwareDevelopment.html"><h3 class="title">Software Development</h3></a>
+							<p class="description">Mauris volutpat urna tristique finibus iaculis. Morbi facilisis, justo eu vulputate elementum, est augue tincidunt ante, sed efficitur leo ligula vel velit.</p>
+							<a href="services/SoftwareDevelopment.html" class="learn-more">Learn More</a>
+						</div>
+						<span class="circle-before"></span>
+					</div>
+				</div>
+				<!-- / End Single Service -->
+				<!-- Single Service -->
+				<div class="col-md-6 col-lg-4">
+					<div class="single-service">
+						<div class="content">
+							<span class="icon">
+								<i class="fab fa-500px"></i>
+							</span>
+							<a href="services/BrandStrategy.html"><h3 class="title">Brand Strategy</h3></a>
+							<p class="description">Mauris volutpat urna tristique finibus iaculis. Morbi facilisis, justo eu vulputate elementum, est augue tincidunt ante, sed efficitur leo ligula vel velit.</p>
+							<a href="services/BrandStrategy.html" class="learn-more">Learn More</a>
+						</div>
+						<span class="circle-before"></span>
+					</div>
+				</div>
+				<!-- / End Single Service -->
+				<!-- Single Service -->
+				<div class="col-md-6 col-lg-4">
+					<div class="single-service">
+						<div class="content">
+							<span class="icon">
+								<i class="fas fa-chart-pie"></i>
+							</span>
+							<a href="services/Marketing.html"><h3 class="title">Marketing</h3></a>
+							<p class="description">Mauris volutpat urna tristique finibus iaculis. Morbi facilisis, justo eu vulputate elementum, est augue tincidunt ante, sed efficitur leo ligula vel velit.</p>
+							<a href="services/Marketing.html" class="learn-more">Learn More</a>
+						</div>
+						<span class="circle-before"></span>
+					</div>
+				</div>
+				<!-- / End Single Service -->
+				<!-- Single Service -->
+				<div class="col-md-6 col-lg-4">
+					<div class="single-service">
+						<div class="content">
+							<span class="icon">
+								<i class="fas fa-laptop-code"></i>
+							</span>
+							<a href="services/Seo.html"><h3 class="title">SEO</h3></a>
+							<p class="description">Mauris volutpat urna tristique finibus iaculis. Morbi facilisis, justo eu vulputate elementum, est augue tincidunt ante, sed efficitur leo ligula vel velit.</p>
+							<a href="services/Seo.html" class="learn-more">Learn More</a>
+						</div>
+						<span class="circle-before"></span>
+					</div>
+				</div>
+				<!-- / End Single Service -->
+			</div>
+		</div>
+	</section>
+  
+  
+  <div id="projectFacts" class="sectionClass">
+    <div class="fullWidth eight columns">
+        <div class="projectFactsWrap ">
+            <div class="item wow fadeInUpBig animated animated" data-number="12" style="visibility: visible;">
+                <i class="fa fa-briefcase"></i>
+                <p id="number1" class="number">+4000</p>
+                <span></span>
+                <p>Projects Done</p>
+            </div>
+            <div class="item wow fadeInUpBig animated animated" data-number="55" style="visibility: visible;">
+                <i class="fa fa-smile-o"></i>
+                <p id="number2" class="number">+1000</p>
+                <span></span>
+                <p>Years Of Experience</p>
+            </div>
+            <div class="item wow fadeInUpBig animated animated" data-number="359" style="visibility: visible;">
+                <i class="fa fa-coffee"></i>
+                <p id="number3" class="number">1000</p>
+                <span></span>
+                <p>Happy Client</p>
+            </div>
+            <div class="item wow fadeInUpBig animated animated" data-number="246" style="visibility: visible;">
+                <i class="fa fa-smile-o"></i>
+                <p id="number4" class="number">246</p>
+                <span></span>
+                <p>Team</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+  </body>
+  <script>
+	$.fn.jQuerySimpleCounter = function( options ) {
+	    var settings = $.extend({
+	        start:  0,
+	        end:    14,
+	        easing: 'swing',
+	        duration: 400,
+	        complete: ''
+	    }, options );
+
+	    var thisElement = $(this);
+
+	    $({count: settings.start}).animate({count: settings.end}, {
+			duration: settings.duration,
+			easing: settings.easing,
+			step: function() {
+				var mathCount = Math.ceil(this.count);
+				thisElement.text(mathCount);
+			},
+			complete: settings.complete
+		});
+	};
+
+
+$('#number1').jQuerySimpleCounter({end: 4000,duration: 3000});
+$('#number2').jQuerySimpleCounter({end: 1000,duration: 3000});
+$('#number3').jQuerySimpleCounter({end: 1000,duration: 2000});
+$('#number4').jQuerySimpleCounter({end: 246,duration: 2500});
+
+
+
+  	/* AUTHOR LINK */
+     $('.about-me-img').hover(function(){
+            $('.authorWindowWrapper').stop().fadeIn('fast').find('p').addClass('trans');
+        }, function(){
+            $('.authorWindowWrapper').stop().fadeOut('fast').find('p').removeClass('trans');
+        });</script>
+</html>
