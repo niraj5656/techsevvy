@@ -1,0 +1,571 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About us</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js?r=5426"></script>
+  <link rel="stylesheet" href="CSS/style.css">
+  <style>
+    * {
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: "Open Sans",sans-serif;
+}
+
+body {
+}
+
+
+.body{
+  min-height: 100vh;
+ display:flex;
+  align-items:center;
+  justify-content: center;
+}
+
+
+.about { background:url("https://images.pexels.com/photos/238118/pexels-photo-238118.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260") no-repeat left;
+  background-size:55%;
+  background-color: transparent;;
+  overflow:hidden;
+  padding:100px 0;
+  
+}
+
+.inner {
+  width:55%;
+  float:right;
+  background: white;
+  padding:150px;
+}
+
+
+
+
+.inner h1 {
+  margin-bottom:30px;
+  font-size:30px;
+  font-weight:900;
+}
+
+.text {
+  font-size:13px;
+  color:#545454;
+  line-height:30px;
+  text-align:justify;
+  margin-bottom:40px;
+}
+
+
+.skills {
+  display: flex;
+  justify-content: space-around;
+  font-weight:700;
+  font-size:13px;
+  color:black;
+
+}
+
+
+ @media screen and (max-width:1200px){
+   
+   .inner {
+     padding:80px;
+   }
+   
+}
+
+
+
+ @media screen and (max-width:1000px){
+   
+   .about {
+     background-size:100%;
+     padding:100px  40px;
+   }
+   
+   .inner {
+     width:100%;
+   }
+   
+}
+
+
+ @media screen and (max-width:600px){
+   
+   .about {
+     padding:0;
+   }
+   
+   .inner {
+     padding:60px;
+   }
+   
+   
+}
+
+
+#diagonals{
+  overflow-x: hidden;
+}
+
+h2  {
+    font-size: 1.4em;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+p {
+    font-weight: 200;
+    font-size: 0.9em;
+    line-height: normal;
+    margin: 10px 0;
+}
+.split-section {
+  clear: both;
+  position: relative;
+  height: 450px;
+  margin: 90px 0;
+  background: #333;
+}
+
+.infos {
+    color: #fff;
+  padding: 60px;
+}
+
+/* build the rectangles */
+.rr-left,
+.rr-right {
+  overflow:hidden;
+  height: 430px;
+  margin: 0;
+  padding: 30px;
+  float:left;
+    color: #fff;
+  height: 500px;
+     -webkit-transform: skew(-10deg, 0deg);
+  -moz-transform: skew(-10deg, 0deg);
+  -o-transform: skew(-10deg, 0deg);
+}
+
+.rr-left img, .rr-right img{
+position:absolute;
+top: -9999px;
+left: -9999px;
+right: -9999px;
+bottom: -9999px;
+margin: auto;
+height: 100% ;
+width: auto;
+     -webkit-transform: skew(10deg, 0deg);
+  -moz-transform: skew(10deg, 0deg);
+  -o-transform: skew(10deg, 0deg);
+}
+
+.rr-left {
+   margin: -30px 0 0 -20px;
+ left: -30px;
+}
+
+.rr-right {
+   margin: -30px -20px 0 0;
+ right: -45px;
+}
+
+
+/* Responsive */
+
+@media only screen and (max-width: 768px) {
+  .rr-left{
+     -webkit-transform: skew(0deg);
+  -moz-transform: skew(0deg);
+  -o-transform: skew(0deg);
+  left: 0;
+    margin:0;
+  }
+  
+  .rr-left:before{
+    display:none;
+  }
+  
+  .split-section{
+    height:auto;
+  }
+  
+
+}
+
+
+.top {
+    font-size: 3em;
+    font-weight: bold;
+    text-align: center;
+}
+
+.wrap {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 30px;
+    max-width: 1100px;
+    margin: auto;
+    margin-top: 50px;
+}
+
+.box {
+    background: gray;
+    border-radius: 10px;
+}
+
+.box img {
+     width: 100%;
+   height: 300px;
+}
+
+.social {
+    margin-top: -270px;
+    background: #2b3da6;
+    border-radius: 0 20px 20px 0;
+    position: absolute;
+}
+
+.social a {
+    display: flex;
+    margin: 5px;
+    position: relative;
+    text-decoration: none;
+    font-size: 15px;
+    color: #fff;
+    padding: 5px;
+
+}
+
+.fa {
+    line-height: 30px;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    text-align: center;
+
+}
+
+.text-team {
+    text-align: center;
+    color: #fff;
+}
+
+.text p {
+    font-size: 20px;
+}
+
+
+@media screen and (max-width: 500px) {
+    .wrap {
+        display: block;
+    }
+}
+
+
+.our-clients .container {
+  width: 100%;
+  height: 100%;
+  margin-top: -200px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+
+.our-clients .container ul {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
+  transition: 0.3s;
+}
+
+.our-clients .container ul li {
+  list-style: none;
+  width: 30%;
+  height: 100px;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  padding: 0 8px;
+}
+
+.our-clients .container ul li p {
+  background: #58585a;
+  text-align: center;
+  color: #fff;
+  line-height: 200px;
+  border-radius: 10px 8px; 
+}
+
+  </style>
+</head>
+  
+  
+  
+<body>
+    <div class="navigation-wrap bg-light start-header start-style">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="navbar navbar-expand-md navbar-light">
+                        <a class="navbar-brand" href="#">
+                            <img src="https://assets.codepen.io/1462889/fcy.png" alt="">
+                        </a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav ml-auto py-4 py-md-0">
+                                <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                                    <a class="nav-link" href="Index.html">Home</a>
+                                </li>
+                                <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                                    <a class="nav-link" href="about.html">About Us</a>
+                                </li>
+                                <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+									<a class="nav-link" href="service.html">Services</a>
+								</li>
+								<li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                                    <a class="nav-link" href="package.html">Package</a>
+                                </li>
+								<li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+									<a class="nav-link" href="contact.html">Contact</a>
+								</li>
+								<li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+									<a class="nav-link" href="career.html">Career</a>
+								</li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+  <div class="body">
+   <div class="about">
+    <div class="inner">
+      <h1>About Us</h1>
+      <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+
+</p>
+      
+      <div class="skills">
+
+        <span> Web Design</span>
+        <span> Photoshop & Illustration</span>
+        <span> Coding</span>
+        
+        
+      </div>
+      
+      
+     
+  </div>
+    </div>
+  </div>
+  
+  <div class="container-fluid">
+        <div id="diagonals" class="site-content" role="main">
+          
+    <!--Image tilting in the left-->        
+ <div class="row split-section">
+   <div class="col-sm-12 hidden-xs col-md-6 rr-left no-gutters gs_reveal gs_reveal_fromLeft">
+<img src="https://www.gettyimages.pt/gi-resources/images/Homepage/Hero/PT/PT_hero_42_153645159.jpg">
+</div>
+   
+    <div class="col-sm-12 col-xs-12 col-md-6 infos h-100 align-items-center d-flex no-gutters">
+    <div class="inner-split gs_reveal gs_reveal_fromRight">
+    <h2>Our Vision. </h2>
+      
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+      </div>
+</div>  
+</div>
+<!--End of mage tilting in the left-->
+          
+          <!--Image tilting in the right-->        
+ <div class="row split-section">
+ 
+   <div class="col-sm-12 col-xs-12 col-md-6 infos h-100 align-items-center d-flex no-gutters gs_reveal gs_reveal_fromLeft">
+    <div class="inner-split">
+    <h2>Our Mission. </h2>
+      
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+      </div>
+</div> 
+   
+   <div class="col-sm-12 hidden-xs col-md-6 rr-right no-gutters gs_reveal gs_reveal_fromRight">
+     <img src="https://www.gettyimages.pt/gi-resources/images/Homepage/Hero/PT/PT_hero_42_153645159.jpg">
+</div>
+   
+</div>
+<!--End of mage tilting in the right-->
+          
+  </div>
+</div>
+  
+        </div>
+  
+  <div class="top"><span>Meet Our Team</span></div>
+    <div class="wrap">
+        <div class="box">
+            <img src="https://images.pexels.com/photos/1595385/pexels-photo-1595385.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+            <div class="social">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-youtube"></i></a>
+                <a href="#"><i class="fa fa-linkedin"></i></a>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+            </div>
+            <div class="text-team">
+                <h1>Neeraj Yadav</h1>
+                <p>Frontend Developer</p>
+            </div>
+        </div>
+        <div class="box">
+            <img src="https://images.pexels.com/photos/17795616/pexels-photo-17795616/free-photo-of-man-working-on-a-laptop-in-a-modern-living-room.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+            <div class="social">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-youtube"></i></a>
+                <a href="#"><i class="fa fa-linkedin"></i></a>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+            </div>
+            <div class="text-team">
+                <h1>Krutik Panchal</h1>
+                <p>SEO & Marketing</p>
+            </div>
+        </div>
+        <div class="box">
+            <img src="https://images.pexels.com/photos/17050933/pexels-photo-17050933/free-photo-of-photo-of-a-pensive-young-man-in-a-suit-holding-a-book.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+            <div class="social">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-youtube"></i></a>
+                <a href="#"><i class="fa fa-linkedin"></i></a>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+            </div>
+            <div class="text-team">
+                <h1>Ritu Sharma</h1>
+                <p>PHP Developer</p>
+            </div>
+        </div>
+    </div>
+  
+  <section class="our-clients">
+    <div class="container">
+      <ul id="client-slider">
+        <li><p>client1</p></li>
+        <li><p>client2</p></li>
+        <li><p>client3</p></li>
+        <li><p>client4</p></li>
+        <li><p>client5</p></li>
+        <li><p>client6</p></li>
+        <li><p>client7</p></li>
+        <li><p>client8</p></li>
+      </ul>
+    </div>
+  </section>
+
+  <footer id="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <a href="index.html"><img src="https://images.unsplash.com/photo-1599305445671-ac291c95aaa9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bG9nb3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=400&q=60" alt="" class="img-fluid logo-footer"></a>
+              <div class="footer-about">
+                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,  </p>
+              </div>
+
+            </div>
+            <div class="col-md-3">
+                <div class="useful-link">
+                    <h2>Useful Links</h2>
+                    <img src="./assets/images/about/home_line.png" alt="" class="img-fluid">
+                    <div class="use-links">
+                        <li><a href="index.html"><i class="fa-solid fa-angles-right"></i> Home</a></li>
+                        <li><a href="about.html"><i class="fa-solid fa-angles-right"></i> About Us</a></li>
+                        <li><a href="gallery.html"><i class="fa-solid fa-angles-right"></i> Services</a></li>
+                        <li><a href="contact.html"><i class="fa-solid fa-angles-right"></i> Package</a></li>
+        <li><a href="contact.html"><i class="fa-solid fa-angles-right"></i> Contact</a></li>
+        <li><a href="contact.html"><i class="fa-solid fa-angles-right"></i> Careers</a></li>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-3">
+                <div class="social-links">
+                    <h2>Follow Us</h2>
+                    <img src="./assets/images/about/home_line.png" alt="">
+                    <div class="social-icons">
+                        <li><a href=""><i class="fa-brands fa-facebook-f"></i> Facebook</a></li>
+                        <li><a href=""><i class="fa-brands fa-instagram"></i> Instagram</a></li>
+                        <li><a href=""><i class="fa-brands fa-linkedin-in"></i> Linkedin</a></li>
+        <li><a href=""><i class="fa-brands fa-github"></i> GitHub</a></li>
+                    </div>
+                </div>
+            
+
+            </div>
+            <div class="col-md-3">
+                <div class="address">
+                    <h2>Address</h2>
+                    <img src="./assets/images/about/home_line.png" alt="" class="img-fluid">
+                    <div class="address-links">
+                        <li class="address1"><i class="fa-solid fa-location-dot"></i> Kolathur ramankulam-
+                            Malappuram Dt 
+                           Kerala 679338</li>
+                           <li><a href=""><i class="fa-solid fa-phone"></i> +91 90904500112</a></li>
+                           <li><a href=""><i class="fa-solid fa-envelope"></i> mail@1234567.com</a></li>
+                    </div>
+                </div>
+            </div>
+          
+        </div>
+    </div>
+
+</footer>
+<!-- footer section end -->
+<!-- footer copy right section start -->
+<section id="copy-right">
+    <div class="copy-right-sec"><i class="fa-solid fa-copyright"></i>  
+        lorem ispum lorem ispum 2022 Powerd By <a href="#">lorem ispum</a> 
+
+
+    </div>
+
+</section>
+  
+  
+      </body>
+<script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/ScrollTrigger.min.js"></script>
+<script>var clientSlider = document.getElementById('client-slider');
+    var clientList = clientSlider.getElementsByTagName('li');
+    
+    setInterval(() => {
+      clientSlider.style.transform = "translateX(-20%)";
+    }, 3000);
+    
+    clientSlider.addEventListener('transitionend', function () {
+      clientSlider.appendChild(clientSlider.firstElementChild);
+    
+      clientSlider.style.transition = "none";
+      clientSlider.style.transform = "translateX(0)";
+      setTimeout(() => {
+        clientSlider.style.transition = "0.3s";
+      });
+    })
+    
+    
+
+    </script>
+</html>
